@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>  
+<table class="tablePersonas" id="tablePersonas">
+    <thead>
+      <tr>
+        <th>NSS</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Tipo de sangre</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < persons.length; i++) { %>
+        <tr>
+          <td><%= persons[i].nss %></td>
+          <td><%= persons[i].nombre %></td>
+          <td><%= persons[i].edad %></td>
+          <td><%= persons[i].tipoSangre %></td>
+          <td>
+            <button class="boton-eliminar">Eliminar</button>
+            <button class="boton-editar">Editar</button>  
+      <% } %>
+    </tbody>
+  </table>
+</body>
+  
