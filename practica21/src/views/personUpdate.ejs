@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styleUpdatePerson.css">
+    </head>
+    <body>
+        <h1>Actualización de registro</h1>
+        
+        <form action="/updatePerson" method="POST">
+            <label for="nss">NSS: </label>
+            <input type="text" name="nss" id="nss" value="<%= `${myPerson.nss}` %>"> <br><br>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" value="<%= `${myPerson.nombre}` %>"> <br><br>
+            <label for="nss">Edad: </label>
+            <input type="text" name="edad" id="edad" value="<%= `${myPerson.edad}` %>"> <br><br>
+            <label for="nss">Tipo de sangre: </label>
+            <input type="text" name="tipoSangre" id="tipoSangre" value="<%= `${myPerson.tipoSangre}` %>"> <br><br>
+            <label for="nss">ID: </label>
+            <input type="text" name="objId" id="objI" value="<%= `${myPerson._id}` %>"> <br><br>
+            <button type="submit" value="">
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <span>Actualización</span>
+              </button>        
+        </form>
+    </body>
+</html>
