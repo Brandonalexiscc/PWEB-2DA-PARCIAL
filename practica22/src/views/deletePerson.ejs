@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Eliminar persona</title>
+</head>
+<body>
+  <h1>Eliminar persona</h1>
+  <p>¿Está seguro que desea eliminar la siguiente persona?</p>
+  <form action="/delete/<%= `${myPerson._id}` %>" method="POST">
+    <input type="hidden" name="_id" value="<%= person._id %>">
+    <label for="nss">NSS:</label>
+    <input type="text" name="nss" id="nss" value="<%= person.nss %>" readonly><br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="<%= person.nombre %>" readonly><br>
+    <label for="edad">Edad:</label>
+    <input type="text" name="edad" id="edad" value="<%= person.edad %>" readonly><br>
+    <label for="tipoSangre">Tipo de sangre:</label>
+    <input type="text" name="tipoSangre" id="tipoSangre" value="<%= person.tipoSangre %>" readonly><br>
+    <button type="submit" name="action" value="delete">Eliminar</button>
+    <a href="/gente">Cancelar</a>
+  </form>
+</body>
+</html>
