@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Buscar persona</title>
+      </head>
+
+      <body>
+        <form action="/find" method="POST">
+            <label for="criterio">Criterio</label>
+            <input type="text" name="criteria" id="criteria"> <br><br>
+            <input type="submit" value="Buscar">
+        </form>
+        <table class="styled-table">
+            <tr>
+                <th>NSS</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Tipo de sangre</th>
+                <th></th>
+            </tr>
+            <% Objet.keys(Person).forEach(function(prop){%>
+            <tr>
+                <td><%- Person[prop].nss %></td>
+                <td><%- Person[prop].nombre %></td>
+                <td><%- Person[prop].edad %></td>
+                <td><%- Person[prop].tipoSangre %></td>
+                <td><a href="<%=`deletePerson/${Person[prop]._id}` %>">Delete</a></td>
+                <td><a href="<%= `findById/${Person[prop]._id}` %>">Update</a></td>
+            </tr>
+            <% }); %>
+        </table>
+        <a href="./addPerson.ejs">Agregar</a>
+      </body>
+</html>

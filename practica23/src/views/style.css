@@ -1,0 +1,43 @@
+/* agregar estilo al person.ejs*/
+
+body{
+    background-color: #f8f8fa;
+    font-family: Cascadia Code;
+}
+
+#main-container{
+    margin: 100px auto;
+    width: 400px;
+    text-align: center;
+
+}
+
+#tablePersonas{
+    margin: auto;
+}
+
+table{
+    background-color: aliceblue;
+    text-align: center;
+    width: 50%;
+}
+
+th, td{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+
+}
+
+thead{
+    background-color: blue;
+    color: greenyellow
+}
+
+button{
+    font-family: cascadia Code;
+    font-size: 15px;
+    border: 0;
+    
+
+}

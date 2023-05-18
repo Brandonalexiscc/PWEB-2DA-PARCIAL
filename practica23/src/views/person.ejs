@@ -1,0 +1,35 @@
+<table class="tablePersonas" id="tablePersonas">
+  <thead>
+    <link rel="stylesheet" href="style.css">
+    <form action="/find" method="post">
+      <label for="criterio">Criterio:</label>
+      <input type="text" id="criteria" name="criteria"> <br><br>
+      <input type="submit" value="Buscar">
+    </form>
+
+    <tr>
+      <th>NSS</th>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Tipo de sangre</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(let i = 0; i < persons.length; i++) { %>
+      <tr>
+        <td><%= persons[i].nss %></td>
+        <td><%= persons[i].nombre %></td>
+        <td><%= persons[i].edad %></td>
+        <td><%= persons[i].tipoSangre %></td>
+        <td>
+          <form method="POST" action="/deletePerson/<%= persons[i]._id %>?_method=DELETE">
+            <button type="submit">Eliminar</button>
+          </form>
+        </td>
+        <td><a href="/updatePerson/<%= persons[i]._id %>">Editar</a></td>
+      </tr> 
+    <% } %>
+  </tbody>
+  <div class="add-btn-container"> <a href="./addPerson">Agregar</a></div>
+
+</table>
